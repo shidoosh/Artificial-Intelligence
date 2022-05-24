@@ -9,3 +9,5 @@ This repo contains the coursework for UCLA's CS 161 course taught by Professor G
 * First-order Logic: Representation, Inference 
 * Bayesian Networks
 * Machine Learning
+
+https://web.cs.ucla.edu/~guyvdb/teaching/cs161/2019f/
