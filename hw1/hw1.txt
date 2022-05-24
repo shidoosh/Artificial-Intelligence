@@ -1,0 +1,75 @@
+1. My PAD function performs as expected on the first 10 Padovan numbers. 
+That is, for the sequence 1 1 1 2 2 3 4 5 7 9, 
+	> (PAD 0) 
+	1
+	> (PAD 1)
+	1
+	> (PAD 2) 
+	1
+	> (PAD 3) 
+	2
+	> (PAD 4) 
+	2
+	> (PAD 5) 
+	3
+	> (PAD 6) 
+	4
+	> (PAD 7) 
+	5
+	> (PAD 8)
+	7
+	> (PAD 9) 
+	9
+When testing on large N, the functions seems hang and never return. 
+I tried large N inputs such as N = 100 and N = 1000, both of which never returned. 
+This is due to the PAD function recursive implementation, such that as N is larger, the more recursive calls are required to compute (PAD N), and to no avail. 
+
+2. I ran the following cases, the first 10 Padovan values: 
+	> (SUMS 0) 
+	0
+	> (SUMS 1)
+	0
+	> (SUMS 2) 
+	0
+	> (SUMS 3) 
+	1
+	> (SUMS 4) 
+	1
+	> (SUMS 5) 
+	2
+	> (SUMS 6) 
+	3
+	> (SUMS 7) 
+	4
+	> (SUMS 8)
+	6
+	> (SUMS 9) 
+	8
+The relationship between the values returned by PAD and SUMS is 
+(PAD N) = (SUMS N) + 1. 
+This is because SUMS considers N = 0, 1, 2 to return 0, since there are no additions 
+for the first 3 values. As a result, (PAD N) adds 1 to the recursive call 
+when N = 0, 1, 2, while (SUMS N) does not, resulting each value of (PAD N) to be incremented by 1 with respect to its respective (SUMS N) value. 
+
+3. The following test cases given on the spec performed as followed for my ANON function: 
+     > (ANON '42)
+     ?
+     > (ANON 'FOO)
+     ?
+     > (ANON '(((L E) F) T))
+     (((? ?) ?) ?)
+     > (ANON '(5 FOO 3.1 -0.2))
+     (? ? ? ?)
+     > (ANON '(1 (FOO 3.1) -0.2))
+     (? (? ?) ?)
+     > (ANON '(((1 2) (FOO 3.1)) (BAR -0.2)))
+     (((? ?) (? ?)) (? ?))
+     > (ANON '(R (I (G (H T)))))
+     (? (? (? (? ?))))
+
+I also tried a few cases of my own: 
+     > (ANON '(cs (161)))
+     (? (?))
+     > (ANON '((WOO(HOO))))
+     ((? (?)))
+     

@@ -1,0 +1,34 @@
+
+
+1. These are my results for the test cases given on the spec:
+  	> (BFS '(ROOT))
+	(ROOT)
+	> (BFS '((((L E) F) T)))
+	(T F L E)
+	> (BFS '((R (I (G (H T))))))
+	(R I G H T)
+	> (BFS '(((A (B)) C (D))))
+	(C A D B)
+	> (BFS '((T (H R E) E)))
+	(T E H R E)
+	> (BFS '((A ((C ((E) D)) B))))
+   	(A B C D E)
+
+   Here are a few of my own test cases: 
+	> (BFS '((CS) (1 (6 (1)))))
+	(CS 1 6 1)
+	> (BFS '(f (o o) (b) (a (r))))
+	(F O O B A R)
+
+2. These are the results of my own test cases: 
+	> (DFS '(nil nil nil nil) nil)
+	((NIL NIL NIL NIL) (T T NIL NIL) (NIL T NIL NIL) (T T T NIL) (NIL NIL T NIL)
+ 	(T NIL T T) (NIL NIL T T) (T T T T))
+	> (DFS '(T T T T) nil)
+	((T T T T))
+	> (DFS '(T T nil nil) nil)
+	((T T NIL NIL) (NIL T NIL NIL) (T T T NIL) (NIL NIL T NIL) (T NIL T T)
+	 (NIL NIL T T) (T T T T))
+	> (DFS '(nil T nil T) nil)
+	((NIL T NIL T) (T T NIL T) (NIL NIL NIL T) (T NIL T T) (NIL NIL T T) (T T T T))
+

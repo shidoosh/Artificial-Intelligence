@@ -1,0 +1,21 @@
+Is graph1 satisfiable with 3 colors? 
+	No. 
+
+What about with 4 colors? 
+	Yes. 
+
+What do these instances tell you about the graph coloring problem of the above graph? 
+	Because the node with the highest degree is 4, it is not solvable with only 3 colors, but it is with 4 colors. 
+
+Can you give a solution (a coloring) to the graph coloring problem of the above graph based on the results of RSat?
+	One solution:
+		Node 1: yellow
+		Node 2: blue
+		Node 3: green
+		Node 4: blue
+		Node 5: red
+		Node 6: green
+		Node 7: red
+
+What is the minimum number of colors required to properly color graph2?
+	8. 
